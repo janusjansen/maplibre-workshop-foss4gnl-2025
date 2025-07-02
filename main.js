@@ -5,8 +5,8 @@ const protocol = new Protocol();
 maplibregl.addProtocol("pmtiles", protocol.tile);
 
 const map = new maplibregl.Map({
-    container: 'mijnkaart', // container id
+    container: 'mijnkaart', 
     style: './assets/style.json',
-    center: [51.96857, 5.66509], // starting position [lng, lat]
+    center: [5.66509, 51.96857], 
     zoom: 13 // starting zoom
 });
