@@ -23,16 +23,44 @@ map.on('load', () => {
             }
         );
         map.addLayer({
-            'id': 'route',
-            'type': 'line',
-            'source': 'route',
-            'layout': {
-                'line-join': 'round',
-                'line-cap': 'round'
-            },
-            'paint': {
-                'line-color': '#888',
-                'line-width': 8
-            }
-        });
+  'id': 'route-halo',
+  'type': 'line',
+  'source': 'route',
+  'layout': {
+    'line-join': 'round',
+    'line-cap': 'round'
+  },
+  'paint': {
+    'line-color': '#ffffff',
+    'line-width': [
+      'interpolate',
+      ['linear'],
+      ['zoom'],
+      10, 5,
+      15, 12
+    ]
+  }
+});
+
+map.addLayer({
+  'id': 'route',
+  'type': 'line',
+  'source': 'route',
+  'layout': {
+    'line-join': 'round',
+    'line-cap': 'round'
+  },
+  'paint': {
+    'line-color': '#0066cc',
+    'line-opacity': 0.85,
+    'line-width': [
+      'interpolate',
+      ['linear'],
+      ['zoom'],
+      10, 3,
+      15, 8
+    ]
+  }
+});
+
     });
