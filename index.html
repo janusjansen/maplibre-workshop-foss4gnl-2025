@@ -19,5 +19,20 @@
   <body>
 
         <div id="mijnkaart"></div>
+
+<div id="layer-switcher" style="position:absolute;top:10px;left:10px;z-index:1;background:white;padding:4px;">
+  <label for="basemap">Basemap:</label>
+  <select id="basemap">
+    <option value="protomaps">Protomaps</option>
+    <option value="luchtfoto">Luchtfoto</option>
+  </select>
+</div>
+<div id="styleSwitcherContainer" style="position:absolute;top:10px;right:10px;z-index:1;background:white;padding:6px;">
+  <label for="styleSwitcher">Map Style:</label>
+  <select id="styleSwitcher">
+    <option value="assets/style.json">Default</option>
+    <option value="assets/style_dark.json">Dark</option>
+    <option value="assets/style_grayscale.json">Grayscale</option>
+  </select>
   </body>
 </html>
